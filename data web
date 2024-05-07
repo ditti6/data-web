@@ -4,14 +4,7 @@ import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 import java.io.IOException;
 
-public class WebScraper {
-    public static void main(String[] args) {
-        // Укажите URL веб-сайта, который вы хотите просканировать
-        String url = "https://www.example.com";
 
-        try {
-            // Подключение к веб-сайту и получение HTML-страницы
-            Document document = Jsoup.connect(url).get();
 
             // Выбор элементов страницы с помощью CSS-селектора
             Elements articleElements = document.select("h2[class=headline]");
