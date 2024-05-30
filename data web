@@ -14,6 +14,14 @@ import java.io.IOException;
                 String title = articleElement.text();
                 System.out.println("Заголовок: " + title);
             }
+            // Выбор элементов страницы с помощью CSS-селектора
+            Elements articleElements = document.select("h2[class=headline]");
+
+            // Итерация по элементам и вывод текста заголовков
+            for (Element articleElement : articleElements) {
+                String title = articleElement.text();
+                System.out.println("Заголовок: " + title);
+            }
 
         } catch (IOException e) {
             e.printStackTrace();
